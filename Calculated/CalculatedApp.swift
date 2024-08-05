@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct CalculatedApp: App {
+    
+    @StateObject var mainViewModel = MainViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(mainViewModel)
         }
     }
 }
